@@ -3,7 +3,7 @@
   flex-direction: column;
   margin: 48px;
   padding: 16px 32px;
-  align-items: left;
+  align-items: baseline;
   border: 1px solid #d8d8d8;
   border-radius: 4.8px;
   gap: 5px;
@@ -28,7 +28,7 @@
 
 .author {
   font-size: 15px;
-  color:#4386bf;
+  color: #4386bf;
 }
 
 .title {
@@ -40,7 +40,7 @@
 .addCard {
   margin: 48px;
   padding: 16px 32px;
-  align-items: left;
+  align-items: baseline;
   border: 1px solid #d8d8d8;
   border-radius: 4.8px;
   gap: 5px;
