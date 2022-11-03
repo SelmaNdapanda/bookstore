@@ -1,19 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => (
-  <header className='navbar'>
-    <nav className='nav'>
-      <h1 className='store-title'> Bookstore CMS </h1>
-      <ul className='link'>
+  <header className="navbar">
+    <h1 className="store-title"> Bookstore CMS </h1>
+    <nav>
+      <ul className="link">
         <li>
-          <Link to="/" className='links'>
-            Books
+          <Link to="/" className="links">
+            BOOKS
           </Link>
         </li>
         <li>
-          <Link to="/Categories/" className='links'>
-            Categories
+          <Link to="/Categories/" className="links">
+            CATEGORIES
           </Link>
         </li>
       </ul>
