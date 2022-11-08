@@ -20,7 +20,7 @@ const Books = () => {
             key={book.id}
             title={book.title}
             author={book.author}
-            deleteBook={() => deleteBook(book)}
+            remove={() => deleteBook(book)}
           />
         ))}
         <Addbook />
