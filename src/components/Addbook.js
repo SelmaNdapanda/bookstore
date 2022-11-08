@@ -1,25 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addbook } from '../redux/books/books';
 
-const Addbook = () => (
-  <div className="addCard">
-    <h2>ADD NEW BOOK</h2>
-    <form className="addNew">
-      <label htmlFor="book-title">
-        <input type="text" placeholder="Book Title" required />
-      </label>
-      <label htmlFor="book-author">
-        <input type="text" placeholder="Book Author" required />
-      </label>
-      <label htmlFor="book-categories">
-        <select className="categories" id="category" required>
-          <option value="action">Action</option>
-          <option value="science">Science Fiction</option>
-          <option value="economy">Economy</option>
-        </select>
-      </label>
-      <button type="submit">Add Book</button>
-    </form>
-  </div>
-);
+const Addbook = () => {
+  const dispatch = useDispatch();
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+
+  const fetchTitle = (e) => setTitle(e.target.value);
+  const fetchAuthor = (e) => setAuthor(e.target.value);
+
+  const submitBook = (title, author, e) => {
+    e.preventDefault();
+    dispatch(addbook({
+      id: uuidv4(),
+      title,
+      author,
+    }));
+  };
+
+  return (
+    <div>
+      <form className="AddNew">
+        <label htmlFor="book-title">
+          <input type="text" placeholder="Book Title" onChange={fetchTitle} value={title} required />
+        </label>
+        <label htmlFor="book-author">
+          <input type="text" placeholder="Book Author" onChange={fetchAuthor} value={author} required />
+        </label>
+        <button type="submit" onClick={(e) => submitBook(title, author, e)}>Add Book</button>
+      </form>
+    </div>
+  );
+};
 
 export default Addbook;

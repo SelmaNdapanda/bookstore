@@ -1,31 +1,32 @@
-import { React, useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Bookitem from '../components/Bookitem';
 import Addbook from '../components/Addbook';
 
-function Books() {
-  const [books] = useState([
-    {
-      id: '1',
-      category: 'action',
-      title: 'The Hunger Game',
-      author: 'Suzanne Collins',
-    },
-  ]);
+import { removeBook } from '../redux/books/books';
+
+const Books = () => {
+  const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+  const deleteBook = (book) => {
+    dispatch(removeBook(book));
+  };
+
   return (
     <>
       <div>
         {books.map((book) => (
           <Bookitem
             key={book.id}
-            category={book.category}
             title={book.title}
             author={book.author}
+            deleteBook={() => deleteBook(book)}
           />
         ))}
         <Addbook />
       </div>
     </>
   );
-}
+};
 
 export default Books;
