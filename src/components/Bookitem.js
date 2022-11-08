@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Bookitem = (props) => {
-  const { title, author, deleteBook } = props;
+  const { title, author, remove } = props;
 
   return (
     <div className="container">
       <div className="bookCard">
         <p className="title">{title}</p>
         <p className="author">{author}</p>
-        <button type="button" className="Remove" onClick={deleteBook}>Remove</button>
+        <button type="button" className="Remove" onClick={remove}>Remove</button>
       </div>
     </div>
   );
@@ -18,7 +18,7 @@ const Bookitem = (props) => {
 Bookitem.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  deleteBook: PropTypes.func.isRequired,
+  remove: PropTypes.func.isRequired,
 };
 
 export default Bookitem;

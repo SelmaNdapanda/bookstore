@@ -8,7 +8,7 @@ import { removeBook } from '../redux/books/books';
 const Books = () => {
   const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
-  const deleteBook = (book) => {
+  const remove = (book) => {
     dispatch(removeBook(book));
   };
 
@@ -20,7 +20,7 @@ const Books = () => {
             key={book.id}
             title={book.title}
             author={book.author}
-            deleteBook={() => deleteBook(book)}
+            remove={() => remove(book)}
           />
         ))}
         <Addbook />

@@ -11,7 +11,7 @@ const Addbook = () => {
   const fetchTitle = (e) => setTitle(e.target.value);
   const fetchAuthor = (e) => setAuthor(e.target.value);
 
-  const submitBook = (title, author, e) => {
+  const addNew = (title, author, e) => {
     e.preventDefault();
     dispatch(addbook({
       id: uuidv4(),
@@ -29,7 +29,7 @@ const Addbook = () => {
         <label htmlFor="book-author">
           <input type="text" placeholder="Book Author" onChange={fetchAuthor} value={author} required />
         </label>
-        <button type="submit" onClick={(e) => submitBook(title, author, e)}>Add Book</button>
+        <button type="submit" onClick={(e) => addNew(title, author, e)}>Add Book</button>
       </form>
     </div>
   );
