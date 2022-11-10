@@ -12,7 +12,7 @@ const Addbook = () => {
   const fetchTitle = (e) => setTitle(e.target.value);
   const fetchAuthor = (e) => setAuthor(e.target.value);
   const fetchCategory = (e) => setCategory(e.target.value);
-  
+
   const addNew = (title, author, category, e) => {
     e.preventDefault();
     dispatch(addbook({
@@ -35,12 +35,12 @@ const Addbook = () => {
           <input type="text" placeholder="Book Author" onChange={fetchAuthor} value={author} required />
         </label>
         <label htmlFor="book-categories">
-        <select onChange={fetchCategory} value={category} required>
-          <option value="action">Action</option>
-          <option value="fiction">Fiction</option>
-          <option value="adventure">Adventure</option>
-        </select>
-      </label>
+          <select onChange={fetchCategory} value={category} required>
+            <option value="action">Action</option>
+            <option value="fiction">Fiction</option>
+            <option value="adventure">Adventure</option>
+          </select>
+        </label>
         <button type="submit" onClick={(e) => addNew(title, author, category, e)}>Add Book</button>
       </form>
     </div>
