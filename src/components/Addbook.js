@@ -7,17 +7,22 @@ const Addbook = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
 
   const fetchTitle = (e) => setTitle(e.target.value);
   const fetchAuthor = (e) => setAuthor(e.target.value);
+  const fetchCategory = (e) => setCategory(e.target.value);
 
-  const addNew = (title, author, e) => {
+  const addNew = (title, author, category, e) => {
     e.preventDefault();
     dispatch(addbook({
       id: uuidv4(),
       title,
       author,
+      category,
     }));
+    setTitle('');
+    setAuthor('');
   };
 
   return (
@@ -29,7 +34,14 @@ const Addbook = () => {
         <label htmlFor="book-author">
           <input type="text" placeholder="Book Author" onChange={fetchAuthor} value={author} required />
         </label>
-        <button type="submit" onClick={(e) => addNew(title, author, e)}>Add Book</button>
+        <label htmlFor="book-categories">
+          <select onChange={fetchCategory} value={category} required>
+            <option value="action">Action</option>
+            <option value="fiction">Fiction</option>
+            <option value="adventure">Adventure</option>
+          </select>
+        </label>
+        <button type="submit" onClick={(e) => addNew(title, author, category, e)}>Add Book</button>
       </form>
     </div>
   );
