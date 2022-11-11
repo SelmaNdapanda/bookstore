@@ -194,29 +194,78 @@
   cursor: pointer;
 }
 
-
 .addCard {
-  margin: 48px;
-  padding: 16px 32px;
-  align-items: baseline;
-  border: 1px solid #d8d8d8;
-  border-radius: 4.8px;
-  gap: 5px;
-  background-color: #fafafa;
+display: flex;
+flex-direction: column;
+border-top: solid 1px #e8e8e8;
+margin: 1.813rem 0;
+height: auto;
 }
 
-h2 {
-  color: #999898;
-  font-size: 20px;
-  font-weight: bold;
+.formTitle {
+  height: 1.5rem;
+  margin: 1.813rem 32.75rem 1.188rem 6.25rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  color: #888;
 }
 
-.addNew {
-  width: 75rem;
-  margin: 0 0.063rem 0.938rem 0;
-  padding: 2rem 7.438rem 1.625rem 1.688rem;
+.AddNew {
+  display: flex;
+  margin: 1.813rem 6.25rem;
+  gap: 1rem;
+
+
+  /* height: 2.813rem;
+  margin: 1.188rem 2.125rem 0 0;
+  padding: 0.813rem 35.688rem 0.813rem 1.063rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
+  background-color: #fff; */
+}
+
+input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #c4c4c4;
+  height: 1.188rem;
+  letter-spacing: -0.15px;
+  padding: 0.813rem 8.688rem 0.813rem 1.063rem; 
+  border-radius: 4px;
+  border: 1px solid #c4c4c4;
   background-color: #fff;
+  
+}
+
+select {
+  height: 2.813rem;
+  letter-spacing: -0.15px;
+  padding: 0.813rem 8.688rem 0.813rem 1.063rem; 
+  border-radius: 4px;
+  border: 1px solid #c4c4c4;
+  background-color: #fff; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #c4c4c4;
+}
+
+.addBtn {
+  background-color: #0290ff;
+  border-radius: 3px;
+  border:none;
+  width: 7rem;
+  height: 2.813rem;
+  color: #fff;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+.addBtn:hover,
+.addBtn:focus {
+  cursor: pointer;
+  color: #0290ff;
+  background-color: #fff;
+  border: 3px solid #0290ff;
 }
 
