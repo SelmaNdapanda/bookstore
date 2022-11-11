@@ -36,7 +36,7 @@ const Addbook = () => {
           <input type="text" placeholder="Book Author" onChange={fetchAuthor} value={author} required />
         </label>
         <label htmlFor="book-categories">
-          <select onChange={fetchCategory} value={category} required>
+          <select placeholder="Category" onChange={fetchCategory} value={category} required>
             <option value="action">Action</option>
             <option value="fiction">Fiction</option>
             <option value="adventure">Adventure</option>
