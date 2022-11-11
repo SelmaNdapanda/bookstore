@@ -51,6 +51,18 @@
   cursor: pointer;
 }
 
+.userIcon {
+  position: absolute;
+  border: 1px #888 solid;
+  border-radius: 50%;
+  color: #fff;
+  height: 2rem;
+  width: 2rem;
+  background-color: #0290ff;;
+  right: 10%;
+  top: 5%;
+}
+
 .bookCard {
   display: grid;
   grid-template-columns: 3fr 2fr 2fr;
@@ -249,6 +261,7 @@ select {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
+  right: 10%;
 }
 
 .addBtn:hover,
@@ -257,4 +270,24 @@ select {
   color: #0290ff;
   background-color: #fff;
   border: 3px solid #0290ff;
+}
+
+.categories {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.categoryBtn {
+  background-color: #0290ff;
+  border-radius: 3px;
+  border: none;
+  width: 12rem;
+  height: 2.813rem;
+  color: #fff;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  margin-left: 500px;
+  margin-top: 200px;
 }
