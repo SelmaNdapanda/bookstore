@@ -14,7 +14,7 @@
 
 ## Live Demo 
 
-In progress
+[https://bookstore-web-app.netlify.app/](https://bookstore-web-app.netlify.app/)
 
 ## Getting Started
 
