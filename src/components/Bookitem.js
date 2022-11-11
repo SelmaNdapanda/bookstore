@@ -1,10 +1,9 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { removeBook } from '../redux/books/books';
 import { CircularProgressbar } from 'react-circular-progressbar';
+import { removeBook } from '../redux/books/books';
 import 'react-circular-progressbar/dist/styles.css';
-
 
 const Bookitem = (props) => {
   const {
@@ -25,12 +24,12 @@ const Bookitem = (props) => {
         <p className="text author">{author}</p>
         <button type="button" className="remove" onClick={remove}>Remove</button>
       </div>
-      <div className='progressContainer'>
-        <div className='graph'>
-          <CircularProgressbar value={percentage} styles={{ path: { stroke: `rgb(2, 144, 255, ${percentage / 100})`,},}} />
+      <div className="progressContainer">
+        <div className="graph">
+          <CircularProgressbar value={percentage} styles={{ path: { stroke: `rgb(2, 144, 255, ${percentage / 100})` } }} />
         </div>
-        <div className="percentage"> 
-          <p className='percentageNum'>{`${percentage}%`}</p>
+        <div className="percentage">
+          <p className="percentageNum">{`${percentage}%`}</p>
           <span className="completed">Completed</span>
         </div>
       </div>
@@ -43,7 +42,6 @@ const Bookitem = (props) => {
       </div>
     </div>
 
-    
   );
 };
 

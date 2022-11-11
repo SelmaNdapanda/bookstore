@@ -26,9 +26,9 @@ const Addbook = () => {
   };
 
   return (
-    <div className='addCard'>
-      <h2 className='formTitle'>ADD NEW BOOK</h2>
-      <form className="AddNew"> 
+    <div className="addCard">
+      <h2 className="formTitle">ADD NEW BOOK</h2>
+      <form className="AddNew">
         <label htmlFor="book-title">
           <input type="text" placeholder="Book Title" onChange={fetchTitle} value={title} required />
         </label>
@@ -42,7 +42,7 @@ const Addbook = () => {
             <option value="adventure">Adventure</option>
           </select>
         </label>
-        <button type="submit" className='addBtn' onClick={(e) => addNew(title, author, category, e)}>Add Book</button>
+        <button type="submit" className="addBtn" onClick={(e) => addNew(title, author, category, e)}>Add Book</button>
       </form>
     </div>
   );
