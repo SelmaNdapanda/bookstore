@@ -51,14 +51,9 @@
   cursor: pointer;
 }
 
-.container {
+.bookCard {
   display: grid;
   grid-template-columns: 3fr 2fr 2fr;
-  align-items: center;
-  width: 100%;
-}
-
-.bookCard {
   width: 60rem;
   height: 10.625rem;
   margin: 2.313rem 6.25rem 0;
@@ -66,6 +61,11 @@
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
+}
+
+.bookDesk {
+  display: flex;
+  flex-direction: column;
 }
 
 .text {
@@ -112,6 +112,88 @@
   color: #121212;
   cursor: pointer;
 }
+
+.progressContainer {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.graph {
+  color: #ffff;
+  width: 4.25rem;
+  height: 4.25rem;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.percentage {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  color: #121212;
+}
+
+.percentageNum {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-size: 2rem;
+}
+
+.completed {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-size: 0.875rem;
+}
+
+.bookChapter {
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto Slab', serif;
+  margin-top: 2.063rem;
+}
+
+.currentChapter {
+  width: 7.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 3.688rem;
+  color: #121212;
+  opacity: 0.5;
+  font-size: 0.813rem;
+  font-weight: 300;
+}
+
+.chapter {
+  width: 4.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  color: #121212;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.progressBtn {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 3.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  border: none;
+  background-color: #0290ff;
+  color: #fff;
+}
+
+.progressBtn:focus,
+.progressBtn:hover {
+  background-color: #fff;
+  color: #0290ff;
+  border: 3px solid #0290ff;
+  cursor: pointer;
+}
+
 
 .addCard {
   margin: 48px;
