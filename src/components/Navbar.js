@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaUserCircle } from 'react-icons/fa';
 
 const Navbar = () => (
   <header className="navbar">
@@ -18,6 +19,7 @@ const Navbar = () => (
         </li>
       </ul>
     </nav>
+    <FaUserCircle className="userIcon" />
   </header>
 );
 
